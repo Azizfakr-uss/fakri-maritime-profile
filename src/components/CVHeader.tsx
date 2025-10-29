@@ -1,7 +1,21 @@
-import { Mail, MapPin, Calendar } from "lucide-react";
+import { Mail, MapPin, Calendar, Camera } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { useState } from "react";
 
 export const CVHeader = () => {
+  const [currentPhoto, setCurrentPhoto] = useState(profilePhoto);
+
+  const handlePhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setCurrentPhoto(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <header className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground">
       <div className="absolute inset-0 opacity-10">
@@ -13,9 +27,22 @@ export const CVHeader = () => {
           <div className="relative">
             <div className="absolute -inset-1 rounded-full bg-accent opacity-75 blur-md" />
             <img
-              src={profilePhoto}
+              src={currentPhoto}
               alt="Aziz Abdul Fakri"
               className="relative h-48 w-48 rounded-full border-4 border-white object-cover shadow-2xl"
+            />
+            <label
+              htmlFor="photo-upload"
+              className="absolute bottom-2 right-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-elegant hover:scale-110 hover:bg-accent/90"
+            >
+              <Camera className="h-5 w-5" />
+            </label>
+            <input
+              id="photo-upload"
+              type="file"
+              accept="image/*"
+              className="hidden"
+              onChange={handlePhotoChange}
             />
           </div>
           

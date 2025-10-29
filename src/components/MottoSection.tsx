@@ -10,18 +10,8 @@ export const MottoSection = () => {
       <div className="relative">
         <h3 className="mb-4 text-2xl font-bold text-foreground">Motto Hidup</h3>
         <blockquote className="space-y-4 text-lg leading-relaxed text-foreground/90">
-          <p className="italic">
-            "Sebenarnya tidak ada yang perlu dikhawatirkan, Allah memang tidak menjanjikan hidupmu 
-            selalu mudah. Tapi, dua kali Allah berjanji bahwa:"
-          </p>
-          <p className="text-xl font-semibold text-primary">
-            "fa inna ma'al 'usri yusroo, inna ma'al usri yusroo"
-          </p>
-          <p className="text-sm text-muted-foreground">
-            (Q.S. Al-Insyirah: 5-6)
-          </p>
-          <p className="italic">
-            Sesungguhnya bersama kesulitan ada kemudahan, sesungguhnya bersama kesulitan ada kemudahan.
+          <p className="text-2xl font-semibold text-primary">
+            "10% yang terjadi padamu, dan 90% bagaimana kamu bereaksi terhadapnya"
           </p>
         </blockquote>
       </div>
