@@ -61,7 +61,7 @@ export const CVHeader = () => {
               </div>
               <div className="flex items-center justify-center gap-2 md:justify-start">
                 <MapPin className="h-5 w-5" />
-                <span>Indonesia</span>
+                <span>Surakarta, Indonesia</span>
               </div>
               <div className="flex items-center justify-center gap-2 md:justify-start">
                 <Mail className="h-5 w-5" />

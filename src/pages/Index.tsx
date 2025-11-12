@@ -38,13 +38,20 @@ const Index = () => {
               name="AFF (Advanced Fire Fighting)"
               description="Sertifikasi lanjutan pemadaman kebakaran yang memberikan kemampuan untuk mengorganisir dan melatih pemadam kebakaran, serta mengendalikan operasi pemadaman kebakaran di kapal."
             />
+            <CertificationBadge
+              name="Sertifikat Terkait Penanganan Barang Berbahaya (IMDG Code)"
+              description="Sertifikasi untuk menangani, menyimpan, dan mengangkut barang berbahaya sesuai dengan standar internasional IMDG Code dalam operasi maritim."
+            />
+            <CertificationBadge
+              name="Sertifikat Safe Stevedoring Management"
+              description="Sertifikasi manajemen bongkar muat yang aman, mencakup prosedur keselamatan kerja pelabuhan, penanganan kargo, dan supervisi operasi stevedoring."
+            />
           </div>
         </CVSection>
 
         {/* Hobbies */}
         <CVSection title="Hobi & Minat" icon={Heart}>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            <HobbyCard icon={Trophy} title="Main Voli" />
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
             <HobbyCard icon={Palmtree} title="Traveling ke Alam" />
             <HobbyCard icon={Music} title="Mendengarkan Musik" />
             <HobbyCard icon={Heart} title="Eksplorasi" />
